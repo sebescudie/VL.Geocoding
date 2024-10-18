@@ -1,19 +1,14 @@
-# VL.NewLibrary.Template
+# VL.Here
 
-- [ ] A clear and concise description of what this package is and does, also what problem it solves.
-- [ ] In case this is a wrapper, links to original code and which version of it is used
-- [ ] In case this is for a device/protocol, links to the device/protocol-specs
-- [ ] Required dependencies/drivers to download and install in the getting started section below
-- [ ] If available, links to documentation (other than helppatches), tutorial videos, blog posts, ...
-- [ ] Note that you can also include screenshots!
-- [ ] Mention any limitations
+A set of nodes wapping the Here REST API. Only partially implements the geocoding endpoint so far.
+First [get an API key](https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/topics/quick-start.html), and you'll be able to use the lib!
 
 For use with vvvv, the visual live-programming environment for .NET: http://visualprogramming.net
 
 ## Getting started
 - Install as [described here](https://thegraybook.vvvv.org/reference/hde/managing-nugets.html) via commandline:
 
-    `nuget install VL.NewLibrary.Template -pre`
+    `nuget install VL.Here -pre`
 
 - Usage examples and more information are included in the pack and can be found via the [Help Browser](https://thegraybook.vvvv.org/reference/hde/findinghelp.html)
 
@@ -23,8 +18,4 @@ For use with vvvv, the visual live-programming environment for .NET: http://visu
 - When making a pull-request, please make sure to read the general [guidelines on contributing to vvvv libraries](https://thegraybook.vvvv.org/reference/extending/contributing.html)
 
 ## Credits
-Links to libraries this is based on
-
-## Sponsoring
-Development of this library was partially sponsored by:  
-* 
+- Uses the excellent [RestSharp](https://restsharp.dev/) library under the hood

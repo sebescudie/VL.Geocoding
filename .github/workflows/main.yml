@@ -17,9 +17,7 @@ jobs:
     steps:
     - name: Git Checkout
       uses: actions/checkout@master
-#      with:
-#        lfs: 'true'
-    
+
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
 
@@ -29,12 +27,5 @@ jobs:
     - name: Publish VL Nuget
       uses: vvvv/PublishVLNuget@1.0.43
       with:
-        csproj: src\VL.NewLibrary.Template.csproj
-        nuspec: deployment\VL.NewLibrary.Template.nuspec
-
-        # Fill the Icon file
-        icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
-        icon-dst: ./deployment/nugeticon.png
-        
-        # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
+        nuspec: deployment\VL.Here.nuspec
         nuget-key: ${{ secrets.NUGET_KEY }}

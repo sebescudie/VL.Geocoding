@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="RDOttCXiuC5OYq17dqCWnM" LanguageVersion="2024.6.7-0195-gbeba45077f" Version="0.128">
+  <NugetDependency Id="KXwqhbYTLiSM2wM10q3C1a" Location="VL.CoreLib" Version="2024.6.7-0195-gbeba45077f" />
+  <Patch Id="NLjNOZRSae0LrfcTQrRscX">
+    <Canvas Id="VT24oo16d7ENzLqihnVf6b" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="McxqMNBb1kiMzBj6odeMF9">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="VZ05CnKF90dNyUC2Zz1vbs">
+        <Canvas Id="Rc3AXfzkEJWOx8EYoJfs7N" CanvasType="Group">
+          <Node Bounds="208,229,65,19" Id="QnXhALBlsa8NSU7P0kGHAR">
+            <p:NodeReference LastCategoryFullName="IO.Here.Geocoding" LastDependency="VL.Here.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Geocoding" />
+            </p:NodeReference>
+            <Pin Id="FvXWmUdXZskNRIIYKDYyxv" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Se5auKdL7r3LGv5rAKLN0Z" Name="API Key" Kind="InputPin" />
+            <Pin Id="JspaluysHxSLNHjaNl9NmN" Name="Query" Kind="InputPin" />
+            <Pin Id="ITDSXYgn0MENXAvgFeD2ic" Name="Execute" Kind="InputPin" />
+            <Pin Id="OWQDYE1EjKbOxQ4Bqo5tz5" Name="Result" Kind="OutputPin" />
+            <Pin Id="OCfX3JJM1p3NrUKbEs0JrC" Name="In Progress" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TAvk2S4LsRUOO8kUr7J3Kv" Comment="Execute" Bounds="270,206,35,15" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="208,296,65,19" Id="HYlLAV7irEnQdCP8DsQWY3">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="RTO2g8UK3lKL7P4LYtCjzs" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PDfojxJydA0N2Exl33WeAh" Name="Initial Result" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Hq5REtWSgttNRXjPmPboa3" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="QpZZ7ZrD8KzMhfBl4dj5VF" Name="Reset" Kind="InputPin" />
+            <Pin Id="D1ZyHfyVMoJO3KYDUne4Gq" Name="Value" Kind="OutputPin" />
+            <Pin Id="NEB3KV0lTKWPyCPAEwhful" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="ARZMepZbUL5PWaKoxiq2q2" Comment="Query" Bounds="240,166,224,15" ShowValueBox="true" isIOBox="true" Value="ivry sur seine">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BkhGLY22rhmNPaG3Awl7MT" Comment="In Progress" Bounds="270,267,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RgkJy5JFkBzPPOs4vk8l9g" Comment="API Key" Bounds="210,105,258,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="208,344,105,26" Id="QxAFqNZUa8DOQTemu5G4np">
+            <p:NodeReference LastCategoryFullName="IO.Here.Geocoding.GeocodingResult" LastDependency="VL.Here.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="GeocodingResult" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="LzcbfGslAEwMK5mEO2KCjd" Name="Input" Kind="StateInputPin" />
+            <Pin Id="TtMjrOSd6LAPQHyvsq756I" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="H4j8GWqypcFPz8IQQ2zpQL" Name="Id" Kind="OutputPin" />
+            <Pin Id="BeaGLgTw7DuLesuedvRwvb" Name="Title" Kind="OutputPin" />
+            <Pin Id="BL6WHXnyPmWP6sf4WDMA8W" Name="Locality Type" Kind="OutputPin" />
+            <Pin Id="OnYlK3ih5ExQWHUiAR2EBT" Name="Result Type" Kind="OutputPin" />
+            <Pin Id="IwH4DMhvDzGOvqDzfr5eV2" Name="Address" Kind="OutputPin" />
+            <Pin Id="Udc9u1QkafhPXUMxde9YVG" Name="Position" Kind="OutputPin" />
+          </Node>
+          <Pad Id="DGO1zKZOgXPPEnJ4502YIw" Comment="Title" Bounds="230,403,153,30" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="289,457,145,26" Id="FAS0GVD7Ow0P0FK5QbsS6W">
+            <p:NodeReference LastCategoryFullName="IO.Here.Geocoding.Address" LastDependency="VL.Here.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="Address" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="R5vCTAeig6vPcjoSKUnO20" Name="Input" Kind="StateInputPin" />
+            <Pin Id="QTpyN1fZRufL3OTwpq8Fbf" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="UdN1hlJgISfOVhxVwc7fFw" Name="City" Kind="OutputPin" />
+            <Pin Id="EnxpRWU5SvqN5Y8dFyUc8f" Name="Country Code" Kind="OutputPin" />
+            <Pin Id="UUbZ37ggWQzLuyPaqt22WL" Name="Country Name" Kind="OutputPin" />
+            <Pin Id="Ve22o991YmuOMstlVgnacV" Name="County" Kind="OutputPin" />
+            <Pin Id="FwCcTUxRKWCMrmj5lsFFH3" Name="Label" Kind="OutputPin" />
+            <Pin Id="HlSqWp88DcyQZrdUEAmBKw" Name="Postal Code" Kind="OutputPin" />
+            <Pin Id="PG2icf4ojNuOr5MVk7pWvY" Name="State" Kind="OutputPin" />
+            <Pin Id="F934NhoNY0RQQpQDxWZDPR" Name="State Code" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JXZeoIWfmJYOyWdyGcvbIq" Comment="City" Bounds="291,545,74,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UPjTK1mUUwxQCEYhisLB3L" Comment="Country Code" Bounds="311,523,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="IY69ajvzmC0QNxZVPYQaKo" Comment="Postal Code" Bounds="391,503,38,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="487,400,45,26" Id="JlvaUtz7EvdLoNBPAv7wvn">
+            <p:NodeReference LastCategoryFullName="IO.Here.Geocoding.Position" LastDependency="VL.Here.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="Position" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="DIHLiwruR89PZRcCAXOZC8" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EAOkg9PBrV5O86gFbzF690" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="Ruf8BoEJvFdMW7jnVNtKLU" Name="Latitude" Kind="OutputPin" />
+            <Pin Id="V2wgSO5sBJoP0hwn1dcs1f" Name="Longitude" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Ip3zHy0dRPEM2b6Iie54TK" Comment="Latitude" Bounds="489,451,42,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UVnJjyIVAi3MdRnJx0AGuo" Comment="Longitude" Bounds="529,475,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="OiZyVHr1115M6zR2iIGxZn" Bounds="549,92,262,19" ShowValueBox="true" isIOBox="true" Value="First get an API key, it's all explained here:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="TUfaw8a7IULOsryKWTl6dg" Bounds="549,118,272,19" ShowValueBox="true" isIOBox="true" Value="https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/topics/quick-start.html">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="K7jhwLNCOhrQXV43Y7WthY" Bounds="549,166,156,19" ShowValueBox="true" isIOBox="true" Value="Type your search query..">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RmTuJKPJntiNAk0Nc5HLzS" Bounds="549,206,84,19" ShowValueBox="true" isIOBox="true" Value=".. and run it!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="Nx5zDNX11QnP2hpodBEU6U" Name="Create" />
+        <Patch Id="JrWS4MibhUqPAUnmY0Pbup" Name="Update" />
+        <ProcessDefinition Id="VkwqsikkDu6OAh0CSHWnYe">
+          <Fragment Id="G8J66gumLxKNuP7RRPIrcj" Patch="Nx5zDNX11QnP2hpodBEU6U" Enabled="true" />
+          <Fragment Id="P41ZRA7krqYNaLNFYsXu1k" Patch="JrWS4MibhUqPAUnmY0Pbup" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="MxBMyHKioGBOOF1dA4DBUp" Ids="TAvk2S4LsRUOO8kUr7J3Kv,ITDSXYgn0MENXAvgFeD2ic" />
+        <Link Id="Bu75hzPSygGLckmOWPHuxZ" Ids="OWQDYE1EjKbOxQ4Bqo5tz5,Hq5REtWSgttNRXjPmPboa3" />
+        <Link Id="Eq23Km7X02mNCXGTwfIuAY" Ids="ARZMepZbUL5PWaKoxiq2q2,JspaluysHxSLNHjaNl9NmN" />
+        <Link Id="ATmPMjsHSu7MMxXAbEA4G0" Ids="OCfX3JJM1p3NrUKbEs0JrC,BkhGLY22rhmNPaG3Awl7MT" />
+        <Link Id="BejXv8o12UHO3gaeqyxlNV" Ids="RgkJy5JFkBzPPOs4vk8l9g,Se5auKdL7r3LGv5rAKLN0Z" />
+        <Link Id="RxAM0c1wSwMNpWRvhAzEMN" Ids="D1ZyHfyVMoJO3KYDUne4Gq,LzcbfGslAEwMK5mEO2KCjd" />
+        <Link Id="HEaAEcMuRE8P4ylnAnuIxj" Ids="BeaGLgTw7DuLesuedvRwvb,DGO1zKZOgXPPEnJ4502YIw" />
+        <Link Id="KxSlL83NNVvMy8FiJ6S74S" Ids="IwH4DMhvDzGOvqDzfr5eV2,R5vCTAeig6vPcjoSKUnO20" />
+        <Link Id="PWRJDVeM7A5PEZbJmAttZR" Ids="UdN1hlJgISfOVhxVwc7fFw,JXZeoIWfmJYOyWdyGcvbIq" />
+        <Link Id="DAbp8aUTeMFNTYJj0dX66f" Ids="EnxpRWU5SvqN5Y8dFyUc8f,UPjTK1mUUwxQCEYhisLB3L" />
+        <Link Id="Nqxa0jHBxe8MkJRM44HvTj" Ids="HlSqWp88DcyQZrdUEAmBKw,IY69ajvzmC0QNxZVPYQaKo" />
+        <Link Id="TuAzfmbjYDOPdCMCwtmNmu" Ids="Udc9u1QkafhPXUMxde9YVG,DIHLiwruR89PZRcCAXOZC8" />
+        <Link Id="EKynAATIIoMO6F2JYiUiFI" Ids="Ruf8BoEJvFdMW7jnVNtKLU,Ip3zHy0dRPEM2b6Iie54TK" />
+        <Link Id="BwyMBhMaOYoQG9UDsyGXGu" Ids="V2wgSO5sBJoP0hwn1dcs1f,UVnJjyIVAi3MdRnJx0AGuo" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="V6yqOCIlgdjNqZ6FKuLF8F" Location="VL.Here" Version="0.0.0" />
+</Document>
